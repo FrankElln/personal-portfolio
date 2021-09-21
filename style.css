@@ -115,6 +115,8 @@ section {
 
 .intro-sect {
   height: 40rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .titles {
@@ -186,58 +188,57 @@ section {
 
 
 .projects-sect {
-  height: 55rem;
+  height: 57rem;
 }
 
 
 .project-names {
   color: #000dc7;
-  margin-top: 2rem;   /* still need? */
+  margin-bottom: 1rem;
+}
+
+
+.projects-container {
+  margin-top: 2.5rem;
 }
 
 
 .projects-container ul li{
-  display: block; /* places in a new line */
+  display: flex;
   list-style: none;
-  clear: both;
   height: 12.5rem; /* 250px */
   margin-bottom: 2rem;
 }
 
 .projects-container .name-cont {
-  float: left;
-  height: 100%;
+  flex-grow: 1; /* sets standard alignment for both */
+  align-self: center;
 }
 
 .projects-container .name-cont h3 {
+  display: block;
+  margin-top: 0;
   font-size: 1.75rem;
-  display:block;
-}
-
-.projects-container .name-cont .name-posit {
-  margin-top: 50%;
 }
 
 
 .projects-container .image-cont {
-  float: right;
-  height: 100%;
+  position: relative; /* aligns in center */
 }
 
-.project-photo img {
+.projects-container .image-cont img {
   opacity: 1;
   width: 100%;
   height: auto;
   transition: .5s ease; /*transform 0.5s, opacity 0.5s;*/
-  backface-visibility: hidden;
 }
 
-.project-photo:hover img {
+.projects-container .image-cont:hover img {
   opacity: 0.7; /* slightly fades as grows */
   transform: scale(1.10);
 }
 
-.project-photo:hover div {
+.projects-container .image-cont:hover .middle {
   opacity: 1;
 }
 
@@ -250,6 +251,10 @@ section {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.middle a {
+  text-decoration: none;
 }
 
 .text {
@@ -276,6 +281,7 @@ section {
   border-radius: 1rem;
   font-size: 1.2rem;
   margin-right: 0.4rem;
+  padding: 3px 8px;
 }
 
 .btn:hover,
